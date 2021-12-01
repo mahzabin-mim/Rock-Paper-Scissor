@@ -187,7 +187,14 @@ button{
 }
 
 /* ------------------------------------- */
+.credit{
+    font-size: 0.75rem;
+    position: absolute;
+    right: 0;
+    bottom: 0;
 
+    margin: 0.5rem;
+}
 
 
 @media (max-width: 670px) {
