@@ -1,0 +1,213 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Inconsolata', monospace;;
+    font-size: 2rem;
+    text-align: center;
+    background-color: rgba(215, 250, 247, 0.205);
+}
+
+img{
+    max-width: 100%;
+    width: 5rem;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+}
+
+.col{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.section{
+    padding: 1.5rem 0rem;
+}
+
+p{
+    padding: 0.6rem;
+
+}
+
+button{
+    cursor: pointer;
+    border-radius: 0.35em;
+    color: white;
+}
+
+.icons button:hover{
+    outline: 2px solid #A2416B;
+}
+
+.btn {
+    font-size: 1.5rem;
+    padding: 0.2em 1em;
+    margin-top: 1.6rem;
+    border: none;
+    background-color: #A2416B;
+    box-shadow: 2px 2px 2px black;
+}
+
+.btn:hover{
+    opacity: 0.85;
+}
+
+.reload-btn{
+    margin: 1.6rem 0;
+}
+
+.rps-board {
+    max-width: 450px;
+    width: 80%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    background-color: rgb(250, 191, 143);
+}
+
+.rps-choose{
+    background-color: #FF7777;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+}
+
+.rps-screen{
+    display: none;
+    background-color:rgb(255, 236, 200);
+}
+
+.rps-choose, .rps-screen{
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+
+/* ----------------------------------- */
+
+
+.visible {
+    display: block;
+}
+
+
+.human-choice, .computer-choice{
+    width: 45%;
+}
+
+.human-chosen, .computer-chosen{
+    border-radius: 0.4rem;
+}
+
+.human-chosen img{
+    transform: rotate(90deg);
+}
+
+.human-chosen .scissors-icon{
+    transform: scaleX(-1);
+}
+
+.computer-chosen .paper-icon, .computer-chosen .rock-icon{
+    transform: scaleX(-1) rotate(90deg);
+}
+
+.result-text{
+    background-color: #FF7777;
+    color: white;
+    margin-top: 1.6rem;
+
+    outline: 0.15rem dashed black;
+    border-radius: 0.3rem;
+}
+
+
+/* -------------------------------------------------------- */
+
+
+.player-option{
+    position: absolute;
+    background-color: #ff7777e3;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 1rem;
+}
+
+.rps-title{
+    font-size: 2.3rem;
+    color: rgb(223, 253, 203);
+    text-shadow: -0.06em 0.06em rgb(81, 0, 128),
+                 -0.09em 0.09em black;
+    animation-name: change-color;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes change-color{
+    from{color: rgb(203, 235, 253);}
+    to{color: rgb(253, 248, 203);}
+}
+
+.options h2{
+    font-size: 1.3rem;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    color: whitesmoke;
+    text-shadow: 1px 1px 1px black;
+}
+
+.option-name{
+    font-size: 1rem;
+    background-color: antiquewhite;
+    color: #A2416B;
+    text-shadow: 0 0 #A2416B, 0 0 #A2416B;
+
+    margin-bottom: 0.7rem;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    padding: 0.4rem;
+}
+
+.option-name:hover{
+    background-color: rgb(255, 230, 197);
+}
+
+/* ------------------------------------- */
+
+
+
+@media (max-width: 670px) {
+    .rps-screen{
+        font-size: 80%;
+    }
+}
+
+@media (max-width: 550px){
+    button+button{
+        margin-left: 1rem;
+    }
+
+    .rps-title{
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 350px) {
+    html{
+        font-size: 70%;
+    }
+}

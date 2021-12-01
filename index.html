@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="rps-board">
+        <div class="player-option">
+            <h1 class="rps-title">Rock-Paper-Scissors</h1>
+            <div class="options col">
+                <h2>Play:</h2>
+                <p class="five-round option-name">Five Rounds</p>
+                <p class="ten-round option-name">Ten Rounds</p>
+                <p class="unlimited option-name">Unlimited</p>
+            </div>
+        </div>
+
+        <div class="rps-choose section">
+            <p>Choose:</p>
+            <div class='icons row'>
+                <button class="rock">
+                    <img src="images/icons8-hand-rock-100.png" alt="rock" class="rock-icon">
+                </button>
+
+                <button class="paper">
+                    <img src="images/icons8-hand-100.png" alt="paper" class="paper-icon">
+                </button>
+
+                <button class="scissors">
+                    <img src="images/icons8-sign-language-h-100.png" alt="scissors" class="scissors-icon">
+                </button>
+            </div>
+        </div>
+
+        <div class="rps-screen section">
+            <div class="rps-screen__chosen row">
+                <div class="human-choice"><p class="col">You: <span id="human-score">0</span></p></div>
+                <div class="computer-choice"><p class="col">Com: <span id="computer-score">0</span></p></div>
+            </div>
+
+            <button class="next-btn btn">Next</button>
+        </div>
+
+
+        <button class="reload-btn btn">New Game</button>
+    </div>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
